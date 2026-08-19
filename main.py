@@ -78,11 +78,15 @@ def calculate_attendance():
         # Step 4: Showing  results
         print("\n--- RESULTS ---")
         print(f"Attendance Percentage: {attendance_pct:.2f}%")
-
         if attendance_pct >= 75.0:
             print("Status:  Eligible for Exams")
         else:
             print("Status: Shortage of Attendance (< 75%) and ur not eligible for the examination ")
+
+            #adding new feature wher cod ewill tell about hoow many lec u should attend to be eligble
+            #continuosly to reach the 75 percent attendence
+            lecture_needed = 3*total_lecture - 4*total_lectures
+            print(f"you need to attend next {lecture_needed} lectures conntinuosly to reach 75% attendence")
 
     except ValueError:
         print(" Invalid input! Please enter whole numbers.")
